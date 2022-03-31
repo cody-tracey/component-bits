@@ -4,13 +4,10 @@ import useSignUpForm from './CustomHooks';
 import './login.css';
 
 const Login = () => {
+    const [signedIn,setSignedIn] = useState(true)
     const signup = () => {
-console.log(`
-Username: ${inputs.username}\n
-Password: ${inputs.password}\n
-SignedIn: ${inputs.signedIn}
-`)
-    }
+        console.log(`Username: ${inputs.username}\nPassword: ${inputs.password}\nSignedIn:${signedIn}`)
+    };
 
     const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
 
@@ -27,7 +24,7 @@ SignedIn: ${inputs.signedIn}
                     <input placeholder='Password' type='text' name='password' onChange={handleInputChange} value={inputs.password} />
                 </Form.Field>
                 <Form.Field>
-                    <Checkbox label='Keep me signed in.' name='signedIn' onChange={handleInputChange} value={inputs.signedIn} />
+                    <Checkbox toggle label='Keep me signed in.' name='signedIn' onChange={(e,data) => setSignedIn(data.checked)} checked={signedIn}/>
                 </Form.Field>
                 <Button type='submit'>Submit</Button>
             </Form>

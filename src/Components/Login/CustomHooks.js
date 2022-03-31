@@ -4,7 +4,6 @@ const useSignUpForm = (callback) => {
     const initialState = {
         username: "",
         password: '',
-        signedIn: false,
     }
     const [inputs,setInputs] = useState(initialState);
 
