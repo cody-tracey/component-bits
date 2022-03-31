@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 
 const useSignUpForm = (callback) => {
-    const [inputs,setInputs] = useState({});
+    const initialState = {
+        username: "",
+        password: '',
+        signedIn: false,
+    }
+    const [inputs,setInputs] = useState(initialState);
 
     const handleSubmit = e => {
         if(e){
