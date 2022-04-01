@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Container, Button, Form } from 'semantic-ui-react';
 import useSignUpForm from './RegisterCustomHooks';
 import './register.css';
 
 const Register = () => {
+
+    const[errors,setErrors] = useState();
     
     const signup = () => {
-        console.log(inputs);
+        if(inputs.password !==inputs.password2){setErrors('Passwords Do Not Match!')}
+        else setErrors('');
     };
 
     const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
@@ -29,6 +32,8 @@ const Register = () => {
                 </Form.Field>
                 <Button type='submit'>Submit</Button>
             </Form>
+            <p>{errors ? errors : ""}</p>
+            
             
         </Container>
     )
