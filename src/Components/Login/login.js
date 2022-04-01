@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Button, Form, Checkbox } from 'semantic-ui-react';
-import useSignUpForm from './CustomHooks';
+import useSignUpForm from './LoginCustomHooks';
 import './login.css';
 
 const Login = () => {
