@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Container, Button, Form, Checkbox } from 'semantic-ui-react';
-import useSignUpForm from './LoginCustomHooks';
+import useSignInForm from './LoginCustomHooks';
 import './login.css';
 
 const Login = () => {
     const [signedIn,setSignedIn] = useState(true)
-    const signup = () => {
+    const signin = () => {
         //Here is where we would actually write our sign in function.
-        console.log(`Username: ${inputs.username}\nPassword: ${inputs.password}\nSignedIn:${signedIn}`)
+        console.log(inputs);
     };
 
-    const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
+    const { inputs, handleInputChange, handleSubmit } = useSignInForm(signin);
 
 
     return (

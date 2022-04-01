@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
-const useSignUpForm = (callback) => {
+const useSignInForm = (callback) => {
     const initialState = {
         username: "",
         password: '',
@@ -26,4 +26,4 @@ const useSignUpForm = (callback) => {
     };
 }
 
-export default useSignUpForm;
+export default useSignInForm;
