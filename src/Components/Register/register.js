@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { Container, Button, Form } from 'semantic-ui-react';
 import useSignUpForm from './RegisterCustomHooks';
 import './register.css';
